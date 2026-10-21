@@ -1,26 +1,28 @@
-🔒 Gerador de Senhas Premium (Python + Flask)
+📖 Sobre o Projeto
 
-Um gerador de senhas web altamente seguro e responsivo, desenvolvido com Python e Flask. A interface utiliza um design moderno com efeito Glassmorphism (Dark Mode), inspirado em padrões de UI premium.
+Diferente de geradores comuns que utilizam geração pseudoaleatória, este projeto utiliza a biblioteca secrets nativa do Python, garantindo segurança de nível criptográfico na criação de cada senha. A interface utiliza um design moderno com efeito Glassmorphism (Dark Mode), inspirado em padrões de UI premium.
 
-Diferente de geradores comuns que utilizam geração pseudoaleatória, este projeto utiliza a biblioteca secrets nativa do Python, garantindo segurança de nível criptográfico na criação de cada senha.
+📸 Dica: Arraste um print da tela do seu projeto rodando e solte aqui no README do GitHub para a imagem aparecer no seu portfólio!
 
 🚀 Funcionalidades
 
-Geração Segura: Utiliza o módulo secrets do Python para entropia criptográfica.
+🛡️ Geração Segura: Utiliza o módulo secrets do Python para entropia criptográfica.
 
-Customização Total: Escolha entre 8 e 32 caracteres via slider dinâmico.
+🎛️ Customização Total: Escolha entre 8 e 32 caracteres via slider dinâmico.
 
-Filtros Precisos: Switches para incluir/excluir Maiúsculas, Minúsculas, Números e Símbolos.
+🎚️ Filtros Precisos: Switches para incluir/excluir Maiúsculas, Minúsculas, Números e Símbolos.
 
-UI/UX Premium: Design responsivo, botões interativos e feedback visual (Toast Notification) ao copiar a senha.
+💅 UI/UX Premium: Design responsivo, botões interativos e feedback visual (Toast Notification) ao copiar a senha.
 
-Privacidade: Geração feita 100% no servidor local/backend, sem retenção de dados ou rastreamento.
+🔒 Privacidade: Geração feita 100% no servidor local/backend, sem retenção de dados ou rastreamento.
 
 🛠️ Tecnologias Utilizadas
 
 Backend: Python 3.12, Flask
 
-Frontend: HTML5, CSS3 (Variáveis, Flexbox, Media Queries), JavaScript (para o botão de copiar)
+Frontend: HTML5, CSS3 (Variáveis, Flexbox, Media Queries)
+
+Interatividade: JavaScript Vanilla (para o botão e notificação de cópia)
 
 Ícones: FontAwesome
 
