@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <title>Gerador CodeZera</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🔒 Gerador de Senhas</h1>
+        
+        <form method="POST">
+            <input type="number" name="tamanho" value="12" min="6">
+            <button type="submit">Gerar</button>
+        </form>
+
+        {% if senha %}
+            <div class="resultado">
+                {{ senha }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
