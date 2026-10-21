@@ -1,23 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador CodeZera</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>🔒 Gerador de Senhas</h1>
-        
+    <div class="card">
+        <div class="headerr">
+            <p>Gere senhas seguras e personalizadas com facilidade.</p>
+        </div>
+        <div class="password-display">
+            <span id="senha-gerada">{{ senha }}</span>
+            <div class="display-icons">
+                <i class="fa-regular fa-copy" onclick="copiarSenha()" style="cursor:pointer;"></i>
+            </div>
+            <div id="toast" class="toast"><i class="fa-solid fa-check"></i> Senha copiada!</div>
+        </div>
+
         <form method="POST">
-            <input type="number" name="tamanho" value="12" min="6">
-            <button type="submit">Gerar</button>
+            <div class="length-header">
+                <span>TAMANHO</span>
+                <span id="length-val">12</span>
+            </div>
+            <input type="range" name="tamanho" min="8" max="20" value="12" class="slider-range" oninput="document.getElementById('length-val').innerText = this.value">
+
+            <div class="toggles-grid">
+                <label class="toggle-container">
+                    <label class="switch">
+                        <input type="checkbox" name="maiusculas" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="toggle-label">Maiúsculas</span>
+                </label>
+
+                <label class="toggle-container">
+                    <label class="switch">
+                        <input type="checkbox" name="minusculas" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="toggle-label">Minúsculas</span>
+                </label>
+
+                <label class="toggle-container">
+                    <label class="switch">
+                        <input type="checkbox" name="numeros" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="toggle-label">Números</span>
+                </label>
+
+                <label class="toggle-container">
+                    <label class="switch">
+                        <input type="checkbox" name="simbolos" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="toggle-label">Símbolos</span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn-generate">
+                <i class="fa-solid fa-rotate-right"></i> Gerar senha
+            </button>
         </form>
 
-        {% if senha %}
-            <div class="resultado">
-                {{ senha }}
-            </div>
-        {% endif %}
+        <button class="btn-copy" onclick="copiarSenha()">
+            <i class="fa-regular fa-copy"></i> Copiar senha
+        </button>
+        
+        <div class="footer-note">
+            <i class="fa-solid fa-lock"></i> Geração local • Sem conta • Sem rastreio
+        </div>
     </div>
+
+    <script>
+        function copiarSenha(){
+            var senhaText = document.getElementById("senha-gerada").innerText;
+            navigator.clipboard.writeText(senhaText).then(() => {
+
+                var toast = document.getElementById("toast");
+                toast.classList.add("show");
+
+                setTimeout(function(){ 
+                    toast.classList.remove("show"); 
+                }, 3000);
+            });
+        }
+    </script>
 </body>
 </html>
