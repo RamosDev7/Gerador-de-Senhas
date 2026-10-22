@@ -1,8 +1,6 @@
 📖 Sobre o Projeto
 
-Diferente de geradores comuns que utilizam geração pseudoaleatória, este projeto utiliza a biblioteca secrets nativa do Python, garantindo segurança de nível criptográfico na criação de cada senha. A interface utiliza um design moderno com efeito Glassmorphism (Dark Mode), inspirado em padrões de UI premium.
-
-📸 Dica: Arraste um print da tela do seu projeto rodando e solte aqui no README do GitHub para a imagem aparecer no seu portfólio!
+Diferente de geradores comuns que utilizam geração pseudoaleatória, este projeto utiliza a biblioteca secrets nativa do Python, garantindo segurança de nível criptográfico na criação de cada senha. 
 
 🚀 Funcionalidades
 
@@ -11,8 +9,6 @@ Diferente de geradores comuns que utilizam geração pseudoaleatória, este proj
 🎛️ Customização Total: Escolha entre 8 e 32 caracteres via slider dinâmico.
 
 🎚️ Filtros Precisos: Switches para incluir/excluir Maiúsculas, Minúsculas, Números e Símbolos.
-
-💅 UI/UX Premium: Design responsivo, botões interativos e feedback visual (Toast Notification) ao copiar a senha.
 
 🔒 Privacidade: Geração feita 100% no servidor local/backend, sem retenção de dados ou rastreamento.
 
@@ -24,7 +20,6 @@ Frontend: HTML5, CSS3 (Variáveis, Flexbox, Media Queries)
 
 Interatividade: JavaScript Vanilla (para o botão e notificação de cópia)
 
-Ícones: FontAwesome
 
 📂 Estrutura do Projeto
 
